@@ -1,12 +1,17 @@
 package com.example.ryne.myrxjava;
 
 import android.content.Context;
-import android.database.Observable;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+
+import io.reactivex.Observable;
+import io.reactivex.ObservableEmitter;
+import io.reactivex.ObservableOnSubscribe;
+import io.reactivex.Observer;
+import io.reactivex.functions.Consumer;
 
 import static org.junit.Assert.*;
 
@@ -25,13 +30,22 @@ public class ExampleInstrumentedTest {
         assertEquals("com.example.ryne.myrxjava", appContext.getPackageName());
     }
 
-    //RxJava unit test using JUnit4 test
-    String result = "";
-
     //Simple subscription to to a fix value
     @Test
     public void returnAValue(){
-        result = "";
-
+        final String[] result = {""};
+        Observable.create(new ObservableOnSubscribe<String>() {
+            @Override
+            public void subscribe(ObservableEmitter<String> emitter) throws Exception {
+                try {
+                    result[0] = "hello";
+                    emitter.onComplete();
+                    assertTrue(result[0].equalsIgnoreCase("Hello"));
+                    //observer completed as it can't find "Hello" is empty String result
+                } catch (Exception e) {
+                    emitter.onError(e);
+                }
+            }
+        });
     }
 }
