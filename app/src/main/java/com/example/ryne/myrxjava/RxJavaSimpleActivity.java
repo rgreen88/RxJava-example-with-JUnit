@@ -51,4 +51,13 @@ public class RxJavaSimpleActivity extends AppCompatActivity {
         TextView view = findViewById(R.id.resultView);
         view.setText(String.valueOf(integer));
     }
+
+    //disposing at onStop
+    @Override
+    protected void onStop(){
+        super.onStop();
+        if (disposable!=null && !disposable.isDisposed()){
+            disposable.dispose();
+        }
+    }
 }
