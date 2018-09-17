@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ColorsActivity" />
+        <activity android:name=".BooksActivity" />
     </application>
 
 </manifest>
