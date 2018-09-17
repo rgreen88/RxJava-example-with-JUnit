@@ -38,12 +38,8 @@ public class SimpleStringAdapter extends RecyclerView.Adapter<SimpleStringAdapte
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
         holder.colorTextView.setText(mStrings.get(position));
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(mContext, mStrings.get(position), Toast.LENGTH_SHORT).show();
-            }
-        });
+        holder.itemView.setOnClickListener(v -> Toast.makeText(mContext,
+                mStrings.get(position), Toast.LENGTH_SHORT).show());
     }
 
     @Override
@@ -57,7 +53,7 @@ public class SimpleStringAdapter extends RecyclerView.Adapter<SimpleStringAdapte
 
         public ViewHolder(View view) {
             super(view);
-            colorTextView = (TextView) view.findViewById(R.id.color_display);
+            colorTextView = view.findViewById(R.id.color_display);
         }
     }
 }

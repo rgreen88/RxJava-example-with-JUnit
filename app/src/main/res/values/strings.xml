@@ -7,4 +7,7 @@
     <string name="toast">Toast</string>
     <string name="result">Result</string>
     <string name="start_something_long">Start something long</string>
+    <string name="progress_bar_visible">Progressbar set visible</string>
+    <string name="space" />
+
 </resources>
