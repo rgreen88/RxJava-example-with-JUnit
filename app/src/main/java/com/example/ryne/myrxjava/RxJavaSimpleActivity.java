@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import io.reactivex.Observable;
 import io.reactivex.Scheduler;
@@ -59,5 +60,8 @@ public class RxJavaSimpleActivity extends AppCompatActivity {
         if (disposable!=null && !disposable.isDisposed()){
             disposable.dispose();
         }
+    }
+    public void onClick(View view){
+        Toast.makeText(this, "Still active " + value++, Toast.LENGTH_SHORT).show();
     }
 }
