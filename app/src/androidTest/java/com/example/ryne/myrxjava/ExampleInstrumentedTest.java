@@ -1,6 +1,7 @@
 package com.example.ryne.myrxjava;
 
 import android.content.Context;
+import android.database.Observable;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
 
@@ -28,5 +29,9 @@ public class ExampleInstrumentedTest {
     String result = "";
 
     //Simple subscription to to a fix value
+    @Test
+    public void returnAValue(){
+        result = "";
 
+    }
 }
