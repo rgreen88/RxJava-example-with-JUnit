@@ -1,9 +1,12 @@
 package com.example.ryne.myrxjava;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -56,5 +59,12 @@ public class ColorsActivity extends AppCompatActivity {
         if (disposable!=null && !disposable.isDisposed()) {
             disposable.dispose();
         }
+    }
+
+    //going back to main activity change button
+    public void goBack(View view){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        Toast.makeText(this, "Activity change. ", Toast.LENGTH_SHORT).show();
     }
 }

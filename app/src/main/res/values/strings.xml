@@ -11,5 +11,7 @@
     <string name="space" />
     <string name="colors">Colors</string>
     <string name="books">Books</string>
+    <string name="scheduler">Scheduler</string>
+    <string name="back">Back</string>
 
 </resources>

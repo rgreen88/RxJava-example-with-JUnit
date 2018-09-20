@@ -72,6 +72,18 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
         Toast.makeText(this, "Activity change. " + value++, Toast.LENGTH_SHORT).show();
     }
+    //bookactivity change button
+    public void onBookActivityChange(View view){
+        Intent intent = new Intent(this, BooksActivity.class);
+        startActivity(intent);
+        Toast.makeText(this, "Activity change. " + value++, Toast.LENGTH_SHORT).show();
+    }
+    //bookactivity change button
+    public void onSchedulerActivityChange(View view){
+        Intent intent = new Intent(this, BooksActivity.class);
+        startActivity(intent);
+        Toast.makeText(this, "Activity change. " + value++, Toast.LENGTH_SHORT).show();
+    }
 }
 
 
