@@ -39,7 +39,7 @@ public class BooksActivity extends AppCompatActivity{
         bookSubscription = booksObservable
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(strings -> displayBooks(strings));
+                .subscribe(this::displayBooks);
     }
     @Override
     protected void onDestroy() {
