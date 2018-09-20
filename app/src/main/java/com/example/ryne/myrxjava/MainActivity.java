@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
     }
     //bookactivity change button
     public void onSchedulerActivityChange(View view){
-        Intent intent = new Intent(this, BooksActivity.class);
+        Intent intent = new Intent(this, SchedulerActivity.class);
         startActivity(intent);
         Toast.makeText(this, "Activity change. " + value++, Toast.LENGTH_SHORT).show();
     }

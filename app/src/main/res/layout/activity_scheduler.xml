@@ -40,6 +40,7 @@
         android:layout_alignParentStart="true"
         android:layout_gravity="center"
         android:onClick="goBack"
-        android:text="@string/back" />
+        android:text="@string/back"
+        android:layout_alignParentLeft="true" />
 
 </RelativeLayout>
