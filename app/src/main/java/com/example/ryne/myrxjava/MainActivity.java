@@ -85,6 +85,3 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "Activity change. " + value++, Toast.LENGTH_SHORT).show();
     }
 }
-
-
-//TODO: create activity transfers for each separate activity for books and color and a button to go back. refine navigation.
