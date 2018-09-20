@@ -1,5 +1,6 @@
 package com.example.ryne.myrxjava;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +14,8 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
+
+import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -61,6 +64,13 @@ public class MainActivity extends AppCompatActivity {
     }
     public void onClick(View view){
         Toast.makeText(this, "Still active " + value++, Toast.LENGTH_SHORT).show();
+    }
+
+    //coloractivity change button
+    public void onColorActivityChange(View view){
+        Intent intent = new Intent(this, ColorsActivity.class);
+        startActivity(intent);
+        Toast.makeText(this, "Activity change. " + value++, Toast.LENGTH_SHORT).show();
     }
 }
 

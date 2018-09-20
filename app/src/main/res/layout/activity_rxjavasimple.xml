@@ -18,6 +18,27 @@
         android:text="@string/toast"
         android:onClick="onClick"
         />
+    <Button
+        android:id="@+id/schedulerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/toast"
+        android:onClick="onClick"
+        />
+    <Button
+        android:id="@+id/colorsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/colors"
+        android:onClick="onColorActivityChange"
+        />
+    <Button
+        android:id="@+id/booksButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/books"
+        android:onClick="onBookActivityChange"
+        />
 
     <TextView
         android:id="@+id/resultView"
