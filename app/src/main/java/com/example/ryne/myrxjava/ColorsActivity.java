@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -42,13 +43,15 @@ public class ColorsActivity extends AppCompatActivity {
     }
 
     //ist of colors in rv to view
-    private static List<String> getColorList(){
+    public List<String> getColorList(){
         ArrayList<String> colors = new ArrayList<>();
         colors.add("red");
         colors.add("green");
         colors.add("blue");
         colors.add("pink");
         colors.add("brown");
+        simpleStringAdapter.setStrings(colors);
+        colorListView.setVisibility(View.VISIBLE);
         return colors;
     }
 
