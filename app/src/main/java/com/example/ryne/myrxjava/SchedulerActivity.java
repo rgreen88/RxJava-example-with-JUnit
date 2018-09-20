@@ -1,11 +1,13 @@
 package com.example.ryne.myrxjava;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.concurrent.Callable;
 
@@ -103,5 +105,11 @@ public class SchedulerActivity extends AppCompatActivity {
                 messagearea.setText(String.format("%s\nonNext %s", messagearea.getText().toString(), message));
             }
         };
+    }
+    //going back to main activity change button
+    public void goBack(View view){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        Toast.makeText(this, "Activity change. ", Toast.LENGTH_SHORT).show();
     }
 }

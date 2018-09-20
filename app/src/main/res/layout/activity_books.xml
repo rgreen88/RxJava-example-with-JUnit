@@ -19,4 +19,11 @@
         android:visibility="gone"
         />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="goBack"
+        android:text="@string/back" />
+
 </FrameLayout>
